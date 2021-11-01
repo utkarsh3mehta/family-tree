@@ -19,23 +19,26 @@ export const Navbar = (props) => {
         }`}
       ></div>
       <div
-        className={`d-flex column space-between col-8 vh-100 fixed ${
+        className={`d-flex column space-between col-8 col-md-4 col-lg-2 vh-100 fixed ${
           styles.container
         } ${show && styles.show}`}
       >
-        <div>
-          <span className={`sticky ${styles.close}`} onClick={onToggle}>
+        <div className="d-flex column r-g-1">
+          <span className={`pointer self-align-end ${styles.close}`} onClick={onToggle}>
             &times;
           </span>
+          {props.memuid !== ROOT_UID
+            ? "childOf" in props.member && (
+                <Link to={`/member/${props.member.childOf}`}>
+                  <div className={`${styles.item} d-flex column`}>
+                    <p>Parent:</p>
+                    <p>{FindFamily(props.member.childOf)["name"]}</p>
+                  </div>
+                </Link>
+              )
+            : null}{" "}
           {props.memuid !== ROOT_UID ? (
-            "childOf" in props.member ? (
-              <Link to={`/member/${props.member.childOf}`}>
-                <div className={`${styles.item} d-flex column`}>
-                  <p>Parent:</p>
-                  <p>{FindFamily(props.member.childOf)["name"]}</p>
-                </div>
-              </Link>
-            ) : "marriedTo" in props.member ? (
+            "marriedTo" in props.member ? (
               <Link to={`/member/${props.member.marriedTo}`}>
                 <div className={`${styles.item} d-flex column`}>
                   <p>Other half:</p>
@@ -51,7 +54,7 @@ export const Navbar = (props) => {
           <div className={`${styles.item}`}>Home</div>
         </Link>
       </div>
-      <span className={`absolute ${styles.open}`} onClick={onToggle}>
+      <span className={`pointer absolute ${styles.open}`} onClick={onToggle}>
         &hellip;
       </span>
     </div>

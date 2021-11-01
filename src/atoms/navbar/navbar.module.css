@@ -5,11 +5,12 @@
     right: 0;
     width: 100%;
     transition: 0.5s ease;
+    z-index: 100;
 }
 
 .background.show { 
     left: 0;
-    background-color: rgba(0, 0, 0, 0.3);
+    background-color: rgba(0, 0, 0, 0.7);
 }
 
 .container {
@@ -19,7 +20,7 @@
     bottom: 0;
     left: -100vw;
     transition: 1s ease;
-    z-index: 2;
+    z-index: 120;
 }
 
 .container.show {
@@ -29,10 +30,6 @@
 .open {
     left: 10px;
     z-index: 1;
-}
-
-.close {
-    left: 60%;
 }
 
 .open, .close {
