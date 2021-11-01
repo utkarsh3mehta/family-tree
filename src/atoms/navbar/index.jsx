@@ -24,7 +24,10 @@ export const Navbar = (props) => {
         } ${show && styles.show}`}
       >
         <div className="d-flex column r-g-1">
-          <span className={`pointer self-align-end ${styles.close}`} onClick={onToggle}>
+          <span
+            className={`pointer self-align-end ${styles.close}`}
+            onClick={onToggle}
+          >
             &times;
           </span>
           {props.memuid !== ROOT_UID
@@ -36,19 +39,17 @@ export const Navbar = (props) => {
                   </div>
                 </Link>
               )
-            : null}{" "}
-          {props.memuid !== ROOT_UID ? (
-            "marriedTo" in props.member ? (
-              <Link to={`/member/${props.member.marriedTo}`}>
-                <div className={`${styles.item} d-flex column`}>
-                  <p>Other half:</p>
-                  <p>{FindFamily(props.member.marriedTo)["name"]}</p>
-                </div>
-              </Link>
-            ) : (
-              <span>Loading...</span>
-            )
-          ) : null}
+            : null}
+          {props.memuid !== ROOT_UID
+            ? "marriedTo" in props.member && (
+                <Link to={`/member/${props.member.marriedTo}`}>
+                  <div className={`${styles.item} d-flex column`}>
+                    <p>Other half:</p>
+                    <p>{FindFamily(props.member.marriedTo)["name"]}</p>
+                  </div>
+                </Link>
+              )
+            : null}
         </div>
         <Link to="/">
           <div className={`${styles.item}`}>Home</div>
