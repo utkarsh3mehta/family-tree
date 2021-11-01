@@ -1,0 +1,46 @@
+.background {
+    top: 0;
+    bottom: 0;
+    left: -100vw;
+    right: 0;
+    width: 100%;
+    transition: 0.5s ease;
+}
+
+.background.show { 
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+.container {
+    background-color: rgb(7, 7, 95);
+    color: lightgray;
+    top: 0;
+    bottom: 0;
+    left: -100vw;
+    transition: 1s ease;
+    z-index: 2;
+}
+
+.container.show {
+    left: 0;
+}
+
+.open {
+    left: 10px;
+    z-index: 1;
+}
+
+.close {
+    left: 60%;
+}
+
+.open, .close {
+    font-size: 45px;
+    line-height: 30px;
+}
+
+.item {
+    padding: 1em 1em;
+    border: 1px solid lightgray;
+}
