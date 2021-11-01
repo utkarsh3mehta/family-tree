@@ -1,0 +1,53 @@
+.single-member, .double-member {
+    border-radius: 5px;
+    box-shadow: 0px 0px 2px black;
+    transition: ease 0.5s;
+}
+
+.double-member>hr {
+    min-width: 20px;
+    height: 1px;
+}
+
+.single-member:hover, .double-member:hover {
+    box-shadow: 0px 0px 5px black;
+    transform: scale(1.05);
+}
+
+.single-member>img {
+    width: 100px;
+    height: 100px;
+    overflow: hidden;
+    object-fit: contain;
+}
+
+.single-member>img.M {
+    border-radius: 5px;
+}
+
+.single-member>img.F {
+    border-radius: 50px;
+}
+
+.single-member>img.O {
+    border-radius: 25px;
+}
+
+.single-member>.status {
+    top: 1em;
+    right: 1em;
+    width: 15px;
+    height: 15px;
+    border-radius: 30px;
+    border-width: 2px;
+}
+
+.single-member.active {
+    border-style: solid;
+    border-color: darkgreen;
+}
+
+.single-member.dead {
+    border-style: dashed;
+    border-color: darkred;
+}
