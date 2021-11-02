@@ -4,3 +4,10 @@
     white-space: nowrap;
     overflow: hidden;
 }
+
+.toggleCouple {
+    border-radius: 0.5em;
+    border: none;
+    background-color: palevioletred;
+    color: white;
+}
