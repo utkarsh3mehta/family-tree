@@ -14,7 +14,7 @@ export const FAMILY = [
     id: somtimehta,
     name: "Somti Prakash Mehta",
     sex: "M",
-    status: "dead",
+    status: "expired",
     DOB: "17 Jan, 19xx",
     DOD: "DD MMM, YYYY",
     marriedTo: bimlamehta,
@@ -34,7 +34,6 @@ export const FAMILY = [
     sex: "M",
     status: "active",
     DOB: "DD MMM, 19xx",
-    marriedTo: "rm-19xx",
   },
   {
     id: sanjeevkumarmehta,
@@ -80,7 +79,6 @@ export const FAMILY = [
     sex: "F",
     status: "active",
     DOB: "DD MMM, 19xx",
-    marriedTo: "sm-19xx",
     nickname: "Neetu",
   },
 ];
@@ -104,7 +102,6 @@ export const FindParents = (id) => {
 };
 
 export const FindChildren = (parentid) => {
-  console.log("find children");
   try {
     return FAMILY.filter((mem) => "childOf" in mem).filter((mem) =>
       mem.childOf.includes(parentid)
