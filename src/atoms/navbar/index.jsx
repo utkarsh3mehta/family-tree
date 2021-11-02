@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import PropTypes from "prop-types";
+import PropTypes, { string } from "prop-types";
 import { Link } from "react-router-dom";
-import { ROOT_UID, FindMember } from "../../family";
+import { ROOT_UID, FindMember, FindParents } from "../../family";
 import styles from "./navbar.module.css";
 
 export const Navbar = (props) => {
@@ -31,14 +31,15 @@ export const Navbar = (props) => {
             &times;
           </span>
           {props.memid !== ROOT_UID
-            ? "childOf" in props.member && (
-                <Link to={`/member/${props.member.childOf}`}>
+            ? "childOf" in props.member &&
+              FindParents(props.member["id"]).map((par) => (
+                <Link key={par["id"]} to={`/member/${par["id"]}`}>
                   <div className={`${styles.item} d-flex column`}>
                     <p>Parent:</p>
-                    <p>{FindMember(props.member.childOf)["name"]}</p>
+                    <p>{par["name"]}</p>
                   </div>
                 </Link>
-              )
+              ))
             : null}
           {props.memid !== ROOT_UID
             ? "marriedTo" in props.member && (
@@ -71,7 +72,7 @@ Navbar.propTypes = {
     DOB: PropTypes.string,
     DOD: PropTypes.string,
     marriedTo: PropTypes.string,
-    childOf: PropTypes.string,
+    childOf: PropTypes.arrayOf(string),
     nickname: PropTypes.string,
   }),
   memid: PropTypes.string.isRequired,
