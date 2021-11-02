@@ -9,7 +9,7 @@ export const SingleMember = (props) => {
   const [betterHalf, setBetterHalf] = useState({});
 
   const SingleMemberElement = (member) => (
-    <Link to={`/member/${member.uid}`}>
+    <Link to={`/member/${member.id}`}>
       <div
         className={`d-flex column align-center r-g-1 relative p-1 h-100 ${
           styles["single-member"]
@@ -26,8 +26,8 @@ export const SingleMember = (props) => {
   );
 
   useEffect(() => {
-    setMember(FindMember(props.uid));
-  }, [props.uid]);
+    setMember(FindMember(props.id));
+  }, [props.id]);
 
   useEffect(() => {
     if ("marriedTo" in member) {
@@ -51,6 +51,6 @@ export const SingleMember = (props) => {
 };
 
 SingleMember.propTypes = {
-  uid: PropTypes.string.isRequired,
+  id: PropTypes.string.isRequired,
   single: PropTypes.bool,
 };
