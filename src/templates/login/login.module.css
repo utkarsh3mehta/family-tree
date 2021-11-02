@@ -1,0 +1,31 @@
+.form > div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.form > div > input {
+    padding: 1em;
+    background-color: rgb(99, 99, 99);
+    border: none;
+}
+
+.form > div > input:focus {
+    background-color: rgb(128, 128, 128);
+    border-bottom: 1px solid black;
+}
+
+.form > input[type="submit"] {
+    border-radius: 0.5em;
+    background-color: rgb(128, 128, 128);
+    border: none;
+}
+
+.form > input[type="submit"]:active {
+    background-color: rgb(181, 181, 181);
+}
+
+.error {
+    color: rgb(179, 98, 98);
+}

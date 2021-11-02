@@ -1,0 +1,7 @@
+.container {
+    background-color: rgb(51, 51, 51);
+}
+
+.container h1, .container label {
+    color: lightgray;
+}
