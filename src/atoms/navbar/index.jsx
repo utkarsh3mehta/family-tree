@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
-import { ROOT_UID, FindFamily } from "../../family";
+import { ROOT_UID, FindMember } from "../../family";
 import styles from "./navbar.module.css";
 
 export const Navbar = (props) => {
@@ -30,22 +30,22 @@ export const Navbar = (props) => {
           >
             &times;
           </span>
-          {props.memuid !== ROOT_UID
+          {props.memid !== ROOT_UID
             ? "childOf" in props.member && (
                 <Link to={`/member/${props.member.childOf}`}>
                   <div className={`${styles.item} d-flex column`}>
                     <p>Parent:</p>
-                    <p>{FindFamily(props.member.childOf)["name"]}</p>
+                    <p>{FindMember(props.member.childOf)["name"]}</p>
                   </div>
                 </Link>
               )
             : null}
-          {props.memuid !== ROOT_UID
+          {props.memid !== ROOT_UID
             ? "marriedTo" in props.member && (
                 <Link to={`/member/${props.member.marriedTo}`}>
                   <div className={`${styles.item} d-flex column`}>
                     <p>Other half:</p>
-                    <p>{FindFamily(props.member.marriedTo)["name"]}</p>
+                    <p>{FindMember(props.member.marriedTo)["name"]}</p>
                   </div>
                 </Link>
               )
@@ -64,7 +64,7 @@ export const Navbar = (props) => {
 
 Navbar.propTypes = {
   member: PropTypes.shape({
-    uid: PropTypes.string,
+    id: PropTypes.string,
     name: PropTypes.string,
     sex: PropTypes.string,
     status: PropTypes.string,
@@ -74,5 +74,5 @@ Navbar.propTypes = {
     childOf: PropTypes.string,
     nickname: PropTypes.string,
   }),
-  memuid: PropTypes.string.isRequired,
+  memid: PropTypes.string.isRequired,
 };

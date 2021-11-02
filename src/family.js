@@ -1,72 +1,82 @@
 export const ROOT_UID = "spm-19xx";
+
+const somtimehta = ROOT_UID,
+  bimlamehta = "bm-19xx",
+  sanjeevkumarmehta = "skm-19xx",
+  manishashubhramehta = "mm-19xx",
+  utkarshmehta = "um-1996",
+  kanikamehta = "km-1991",
+  neerajmehta = "nm-19xx",
+  neetamehta = "ntm-19xx";
+
 export const FAMILY = [
   {
-    uid: ROOT_UID,
+    id: somtimehta,
     name: "Somti Prakash Mehta",
     sex: "M",
     status: "dead",
     DOB: "17 Jan, 19xx",
     DOD: "DD MMM, YYYY",
-    marriedTo: "bm-19xx",
+    marriedTo: bimlamehta,
   },
   {
-    uid: "bm-19xx",
+    id: bimlamehta,
     name: "Bimla Mehta",
     sex: "F",
     status: "active",
     DOB: "DD MMM, YYYY",
-    marriedTo: "spm-19xx",
+    marriedTo: somtimehta,
   },
   {
-    uid: "nm-19xx",
+    id: neerajmehta,
     name: "Neeraj Mehta",
-    childOf: "spm-19xx",
+    childOf: [somtimehta, bimlamehta],
     sex: "M",
     status: "active",
     DOB: "DD MMM, 19xx",
     marriedTo: "rm-19xx",
   },
   {
-    uid: "skm-19xx",
+    id: sanjeevkumarmehta,
     name: "Sanjeev Kumar Mehta",
-    childOf: "spm-19xx",
+    childOf: [somtimehta, bimlamehta],
     sex: "M",
     status: "active",
     DOB: "18 Aug, 19xx",
-    marriedTo: "mm-19xx",
+    marriedTo: manishashubhramehta,
     nickname: "Sanju",
   },
   {
-    uid: "mm-19xx",
+    id: manishashubhramehta,
     name: "Manisha Mehta",
     sex: "F",
     status: "active",
     DOB: "15 Nov, 19xx",
-    marriedTo: "skm-19xx",
+    marriedTo: sanjeevkumarmehta,
     nickname: "Shubhra",
   },
   {
-    uid: "um-1996",
+    id: utkarshmehta,
     name: "Utkarsh Mehta",
-    childOf: "skm-19xx",
+    childOf: [sanjeevkumarmehta, manishashubhramehta],
     sex: "M",
     status: "active",
     DOB: "5 Oct, 1996",
     nickname: "Kush",
   },
   {
-    uid: "km-1991",
+    id: kanikamehta,
     name: "Kanika Mehta",
-    childOf: "skm-19xx",
+    childOf: [sanjeevkumarmehta, manishashubhramehta],
     sex: "F",
     status: "active",
     DOB: "12 May, 1991",
     nickname: "Kanu",
   },
   {
-    uid: "ntm-19xx",
+    id: neetamehta,
     name: "Neeta Mehta",
-    childOf: "spm-19xx",
+    childOf: [somtimehta, bimlamehta],
     sex: "F",
     status: "active",
     DOB: "DD MMM, 19xx",
@@ -75,24 +85,41 @@ export const FAMILY = [
   },
 ];
 
-export const FindFamily = (uid) => FAMILY.find((mem) => mem.uid === uid);
-
-export const FindChildren = (parentuid) => {
-  let parent = FAMILY.find((mem) => mem.uid === parentuid);
-  if (parent["sex"] === "F") {
-    return FAMILY.filter((mem) => mem.childOf === parent["marriedTo"]);
-  } else {
-    return FAMILY.filter((mem) => mem.childOf === parentuid);
+export const FindMember = (id) => {
+  try {
+    return FAMILY.find((mem) => mem.id === id);
+  } catch {
+    return {};
   }
 };
 
-export const FindCoupleChildren = (uid1, uid2) => {
-  let children = [];
-  children = [...FAMILY.filter((mem) => mem.childOf === uid1)];
-  FAMILY.filter((mem) => mem.childOf === uid2).forEach((child) => {
-    if (!children.includes(child)) {
-      children.push(child);
-    }
-  });
-  return children;
+export const FindParents = (id) => {
+  try {
+    return FAMILY.find((mem) => mem.id === id)["childOf"].map((parid) =>
+      FAMILY.find((mem) => mem.id === parid)
+    );
+  } catch {
+    return [];
+  }
+};
+
+export const FindChildren = (parentid) => {
+  console.log("find children");
+  try {
+    return FAMILY.filter((mem) => "childOf" in mem).filter((mem) =>
+      mem.childOf.includes(parentid)
+    );
+  } catch (err) {
+    return [];
+  }
+};
+
+export const FindCoupleChilder = (p1id, p2id) => {
+  try {
+    return FAMILY.filter((mem) => "childOf" in mem).filter((mem) =>
+      mem.childOf.includes(p1id, p2id)
+    );
+  } catch {
+    return [];
+  }
 };

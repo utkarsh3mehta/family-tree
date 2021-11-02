@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
 import styles from "./single-member.module.css";
-import { FAMILY } from "../../family";
+import { FindMember } from "../../family";
 
 export const SingleMember = (props) => {
   const [member, setMember] = useState({});
@@ -26,12 +26,12 @@ export const SingleMember = (props) => {
   );
 
   useEffect(() => {
-    setMember(FAMILY.find((mem) => mem.uid === props.uid));
+    setMember(FindMember(props.uid));
   }, [props.uid]);
 
   useEffect(() => {
     if ("marriedTo" in member) {
-      setBetterHalf(FAMILY.find((mem) => mem.uid === member.marriedTo));
+      setBetterHalf(FindMember(member.marriedTo));
     }
   }, [member]);
 
@@ -40,9 +40,9 @@ export const SingleMember = (props) => {
       <div
         className={`d-flex column md-row align-center g-1 relative p-1 ${styles["double-member"]}`}
       >
-        {SingleMemberElement(member)}
-        <hr />
-        {SingleMemberElement(betterHalf)}
+        {member && SingleMemberElement(member)}
+        {betterHalf && <hr />}
+        {betterHalf && SingleMemberElement(betterHalf)}
       </div>
     );
   } else {
