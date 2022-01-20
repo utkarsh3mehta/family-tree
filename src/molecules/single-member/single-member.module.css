@@ -53,3 +53,15 @@
     border-style: dashed;
     border-color: darkred;
 }
+
+.single-member>div {
+    top: 80%;
+    width: 200%;
+    background-color: lightblue;
+    padding: 1em;
+    flex-direction: column;
+}
+
+.single-member:hover>div{
+    display: flex !important;
+}
