@@ -41,16 +41,14 @@ export const Navbar = (props) => {
                 </Link>
               ))
             : null}
-          {props.memid !== ROOT_UID
-            ? "marriedTo" in props.member && (
-                <Link to={`/member/${props.member.marriedTo}`}>
-                  <div className={`${styles.item} d-flex column`}>
-                    <p>Other half:</p>
-                    <p>{FindMember(props.member.marriedTo)["name"]}</p>
-                  </div>
-                </Link>
-              )
-            : null}
+          {"marriedTo" in props.member && (
+            <Link to={`/member/${props.member.marriedTo}`}>
+              <div className={`${styles.item} d-flex column`}>
+                <p>Other half:</p>
+                <p>{FindMember(props.member.marriedTo)["name"]}</p>
+              </div>
+            </Link>
+          )}
         </div>
         <Link to="/">
           <div className={`${styles.item}`}>Home</div>
