@@ -21,18 +21,6 @@ export const SingleMember = (props) => {
           className={styles[member["sex"]]}
         />
         <h4>{member["name"]}</h4>
-        <div className="d-none absolute">
-          {Object.keys(member)
-            .filter((key) => !["id", "marriedTo", "childOf"].includes(key))
-            .map((key, index) => {
-              return (
-                <div key={index}>
-                  <label className="capitalize">{key}: </label>
-                  <label>{member[key]}</label>
-                </div>
-              );
-            })}
-        </div>
       </div>
     </Link>
   );
