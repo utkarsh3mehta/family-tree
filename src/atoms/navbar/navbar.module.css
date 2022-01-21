@@ -8,7 +8,7 @@
     z-index: 100;
 }
 
-.background.show { 
+.background.show {
     left: 0;
     background-color: rgba(0, 0, 0, 0.7);
 }
@@ -39,5 +39,11 @@
 
 .item {
     padding: 1em 1em;
-    border: 1px solid lightgray;
+    border-top: 1px solid lightgray;
+    border-bottom: 1px solid lightgray;
+    transition: .5s ease;
+}
+
+.item:hover {
+    background-color: rgba(255, 255, 255, 0.2);
 }
