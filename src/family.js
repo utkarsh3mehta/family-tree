@@ -138,6 +138,7 @@ export const FAMILY = [
     status: "active",
     DOB: "12 May, 1991",
     nickname: "Kanu",
+    marriedTo: adityapushkarna,
   },
   {
     id: adityapushkarna,
