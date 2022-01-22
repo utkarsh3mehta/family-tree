@@ -42,6 +42,7 @@ export const FAMILY = [
     DOB: "17 Jan, 19xx",
     DOD: "DD MMM, YYYY",
     marriedTo: bimlamehta,
+    photo: "https://ik.imagekit.io/bizwem110d/family-tree/somti_mehta_qFKO7z-kcU.jpeg?ik-sdk-version=javascript-1.4.3&updatedAt=1642826881479",
   },
   {
     id: bimlamehta,
@@ -50,6 +51,7 @@ export const FAMILY = [
     status: "active",
     DOB: "02 Feb, YYYY",
     marriedTo: somtimehta,
+    photo: "https://assets-itkkids-001.fra1.cdn.digitaloceanspaces.com/prabjyot/utkarsh.png",
   },
   {
     id: neerajmehta,
@@ -58,7 +60,8 @@ export const FAMILY = [
     sex: "M",
     status: "active",
     DOB: "10 Nov, 19xx",
-    marriedTo: sangeetamehta
+    marriedTo: sangeetamehta,
+    photo: "https://assets-itkkids-001.fra1.cdn.digitaloceanspaces.com/prabjyot/utkarsh.png",
   },
   {
     id: sangeetamehta,
@@ -67,6 +70,7 @@ export const FAMILY = [
     status: 'active',
     DOB: "16 Nov",
     marriedTo: neerajmehta,
+    photo: "https://assets-itkkids-001.fra1.cdn.digitaloceanspaces.com/prabjyot/utkarsh.png",
   },
   {
     id: rumamehta,
@@ -76,6 +80,7 @@ export const FAMILY = [
     DOB: "13 Sep",
     marriedTo: anoopramachandran,
     childOf: [neerajmehta, sangeetamehta],
+    photo: "https://assets-itkkids-001.fra1.cdn.digitaloceanspaces.com/prabjyot/utkarsh.png",
   },
   {
     id: anoopramachandran,
@@ -84,6 +89,7 @@ export const FAMILY = [
     status: 'active',
     DOB: "23 Nov",
     marriedTo: rumamehta,
+    photo: "https://assets-itkkids-001.fra1.cdn.digitaloceanspaces.com/prabjyot/utkarsh.png",
   },
   {
     id: pranavramachandran,
@@ -92,6 +98,7 @@ export const FAMILY = [
     status: 'active',
     DOB: "5 May",
     childOf: [rumamehta, anoopramachandran],
+    photo: "https://ik.imagekit.io/bizwem110d/family-tree/pranav_ramachandran_90T6YY41FZ.jpeg?ik-sdk-version=javascript-1.4.3&updatedAt=1642826881498",
   },
   {
     id: devanshmehta,
@@ -101,7 +108,8 @@ export const FAMILY = [
     DOB: "9 Dec",
     marriedTo: rakshitamehta,
     childOf: [neerajmehta, sangeetamehta],
-    nickname: "Subhi"
+    nickname: "Subhi",
+    photo: "https://ik.imagekit.io/bizwem110d/family-tree/devansh_mehta_RLOv5FfQb5.jpeg?ik-sdk-version=javascript-1.4.3&updatedAt=1642826881586",
   },
   {
     id: rakshitamehta,
@@ -110,6 +118,7 @@ export const FAMILY = [
     status: 'active',
     DOB: "29 Sep",
     marriedTo: devanshmehta,
+    photo: "https://ik.imagekit.io/bizwem110d/family-tree/rakshita_mehta_flC8vH-cekc5.jpeg?ik-sdk-version=javascript-1.4.3&updatedAt=1642826881643",
   },
   {
     id: sanjeevkumarmehta,
@@ -120,6 +129,7 @@ export const FAMILY = [
     DOB: "18 Aug, 19xx",
     marriedTo: manishashubhramehta,
     nickname: "Sanju",
+    photo: "https://assets-itkkids-001.fra1.cdn.digitaloceanspaces.com/prabjyot/utkarsh.png",
   },
   {
     id: manishashubhramehta,
@@ -129,6 +139,7 @@ export const FAMILY = [
     DOB: "15 Nov, 19xx",
     marriedTo: sanjeevkumarmehta,
     nickname: "Shubhra",
+    photo: "https://assets-itkkids-001.fra1.cdn.digitaloceanspaces.com/prabjyot/utkarsh.png",
   },
   {
     id: kanikamehta,
@@ -139,6 +150,7 @@ export const FAMILY = [
     DOB: "12 May, 1991",
     nickname: "Kanu",
     marriedTo: adityapushkarna,
+    photo: "https://assets-itkkids-001.fra1.cdn.digitaloceanspaces.com/prabjyot/utkarsh.png",
   },
   {
     id: adityapushkarna,
@@ -147,6 +159,7 @@ export const FAMILY = [
     status: 'active',
     DOB: "17 May",
     marriedTo: kanikamehta,
+    photo: "https://assets-itkkids-001.fra1.cdn.digitaloceanspaces.com/prabjyot/utkarsh.png",
   },
   {
     id: adikapushkarna,
@@ -156,6 +169,7 @@ export const FAMILY = [
     status: "active",
     DOB: "13 Aug",
     nickname: "Bantu",
+    photo: "https://assets-itkkids-001.fra1.cdn.digitaloceanspaces.com/prabjyot/utkarsh.png",
   },
   {
     id: utkarshmehta,
@@ -165,6 +179,7 @@ export const FAMILY = [
     status: "active",
     DOB: "5 Oct, 1996",
     nickname: "Kush",
+    photo: "https://assets-itkkids-001.fra1.cdn.digitaloceanspaces.com/prabjyot/utkarsh.png",
   },
   {
     id: bhoorimehta,
@@ -174,7 +189,8 @@ export const FAMILY = [
     status: "expired",
     DOB: "5 Sept, 2020",
     DOD: "11 Oct, 2021",
-    nickname: "Bhuru"
+    nickname: "Bhuru",
+    photo: "https://assets-itkkids-001.fra1.cdn.digitaloceanspaces.com/prabjyot/utkarsh.png",
   },
   {
     id: damrumehta,
@@ -184,6 +200,7 @@ export const FAMILY = [
     status: "active",
     DOB: "1 Aug, 2021",
     nickname: "Babi",
+    photo: "https://assets-itkkids-001.fra1.cdn.digitaloceanspaces.com/prabjyot/utkarsh.png",
   },
   {
     id: pradeepmehta,
@@ -193,6 +210,7 @@ export const FAMILY = [
     status: "active",
     DOB: "11 Oct",
     marriedTo: chandrikamehta,
+    photo: "https://assets-itkkids-001.fra1.cdn.digitaloceanspaces.com/prabjyot/utkarsh.png",
   },
   {
     id: chandrikamehta,
@@ -202,6 +220,7 @@ export const FAMILY = [
     DOB: "23 Sep",
     nickname: "Chinu",
     marriedTo: pradeepmehta,
+    photo: "https://assets-itkkids-001.fra1.cdn.digitaloceanspaces.com/prabjyot/utkarsh.png",
   },
   {
     id: irikamehta,
@@ -210,7 +229,8 @@ export const FAMILY = [
     sex: "F",
     status: "active",
     DOB: "7 May",
-    nickname: "chinki",
+    nickname: "Chinki",
+    photo: "https://assets-itkkids-001.fra1.cdn.digitaloceanspaces.com/prabjyot/utkarsh.png",
   },
   {
     id: ishitmehta,
@@ -220,6 +240,7 @@ export const FAMILY = [
     status: "active",
     DOB: "1 Mar",
     nickname: "Joey",
+    photo: "https://assets-itkkids-001.fra1.cdn.digitaloceanspaces.com/prabjyot/utkarsh.png",
   },
   {
     id: neetamehta,
@@ -229,7 +250,8 @@ export const FAMILY = [
     status: "active",
     DOB: "DD MMM, 19xx",
     nickname: "Neetu",
-    marriedTo: ashoksharma
+    marriedTo: ashoksharma,
+    photo: "https://ik.imagekit.io/bizwem110d/family-tree/neeta_sharma_JpbC8EL_Du.jpeg?ik-sdk-version=javascript-1.4.3&updatedAt=1642826881487",
   },
   {
     id: ashoksharma,
@@ -238,6 +260,7 @@ export const FAMILY = [
     status: "active",
     DOB: "18 Apr",
     marriedTo: neetamehta,
+    photo: "https://ik.imagekit.io/bizwem110d/family-tree/ashok_sharma_i20L1GTbO.jpeg?ik-sdk-version=javascript-1.4.3&updatedAt=1642826881423",
   },
   {
     id: akshaysharma,
@@ -248,6 +271,7 @@ export const FAMILY = [
     DOB: "17 Mar",
     nickname: "Krishan",
     marriedTo: niharikasharma,
+    photo: "https://ik.imagekit.io/bizwem110d/family-tree/akshay_sharma_jQLCHFlRE.jpeg?ik-sdk-version=javascript-1.4.3&updatedAt=1642826881493",
   },
   {
     id: niharikasharma,
@@ -256,6 +280,7 @@ export const FAMILY = [
     status: "active",
     DOB: "3 Sep",
     marriedTo: akshaysharma,
+    photo: "https://ik.imagekit.io/bizwem110d/family-tree/niharika_sharma_HsGODeIh7hC.jpeg?ik-sdk-version=javascript-1.4.3&updatedAt=1642826881508",
   },
   {
     id: arlosharma,
@@ -264,6 +289,7 @@ export const FAMILY = [
     sex: "M",
     status: "active",
     DOB: "1 Sep",
+    photo: "https://assets-itkkids-001.fra1.cdn.digitaloceanspaces.com/prabjyot/utkarsh.png",
   },
   {
     id: udishasharma,
@@ -272,6 +298,7 @@ export const FAMILY = [
     sex: "F",
     status: "active",
     DOB: "20 Oct",
+    photo: "https://ik.imagekit.io/bizwem110d/family-tree/udisha_sharma_RjaOEL1I5z.jpeg?ik-sdk-version=javascript-1.4.3&updatedAt=1642826881495",
   },
   {
     id: manojmehta,
@@ -281,6 +308,7 @@ export const FAMILY = [
     status: "active",
     DOB: "1 May",
     marriedTo: manishamehta,
+    photo: "https://assets-itkkids-001.fra1.cdn.digitaloceanspaces.com/prabjyot/utkarsh.png",
   },
   {
     id: manishamehta,
@@ -289,6 +317,7 @@ export const FAMILY = [
     status: "active",
     DOB: "16 Sep",
     marriedTo: manojmehta,
+    photo: "https://assets-itkkids-001.fra1.cdn.digitaloceanspaces.com/prabjyot/utkarsh.png",
   },
   {
     id: gaurangmehta,
@@ -298,6 +327,7 @@ export const FAMILY = [
     status: "active",
     DOB: "20 May",
     nickname: "Gaurangi",
+    photo: "https://assets-itkkids-001.fra1.cdn.digitaloceanspaces.com/prabjyot/utkarsh.png",
   },
   {
     id: gaurimehta,
@@ -307,6 +337,7 @@ export const FAMILY = [
     status: "active",
     DOB: "25 Oct",
     nickname: "Gauru",
+    photo: "https://ik.imagekit.io/bizwem110d/family-tree/gauri_mehta_oL8qLGbv0odK.jpeg?ik-sdk-version=javascript-1.4.3&updatedAt=1642826881513",
   },
   {
     id: zaramehta,
@@ -316,6 +347,7 @@ export const FAMILY = [
     status: "active",
     DOB: "18 Jan",
     nickname: "Zorro",
+    photo: "https://assets-itkkids-001.fra1.cdn.digitaloceanspaces.com/prabjyot/utkarsh.png",
   },
 ];
 

@@ -13,14 +13,14 @@ export const SingleMember = (props) => {
       <div
         className={`d-flex column align-center r-g-1 relative p-1 h-100 ${
           styles["single-member"]
-        } ${styles[member["status"]]}`}
+        } ${styles[member.status]}`}
       >
         <img
-          src="https://assets-itkkids-001.fra1.cdn.digitaloceanspaces.com/prabjyot/utkarsh.png"
+          src={member.photo}
           alt="single-member"
-          className={styles[member["sex"]]}
+          className={styles[member.sex]}
         />
-        <h4>{member["name"]}</h4>
+        <h4>{member.name}</h4>
       </div>
     </Link>
   );
