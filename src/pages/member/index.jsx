@@ -32,7 +32,7 @@ export const Member = (props) => {
           );
         })}
       </div>
-      <button onClick={onCoupleChange} className={`p-1 ${styles.toggleCouple} mb-2`}>Toggle their other halfs</button>
+      <button onClick={onCoupleChange} className={`p-1 ${styles.toggleCouple} mb-2`}>Toggle their better halfs</button>
     </div>
   );
 };

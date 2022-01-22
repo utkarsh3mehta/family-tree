@@ -45,7 +45,7 @@ export const Navbar = (props) => {
             ? "marriedTo" in props.member && (
                 <Link to={`/member/${props.member.marriedTo}`}>
                   <div className={`${styles.item} d-flex column`}>
-                    <p>Other half:</p>
+                    <p>Better half:</p>
                     <p>{FindMember(props.member.marriedTo)["name"]}</p>
                   </div>
                 </Link>
