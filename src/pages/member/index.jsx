@@ -3,10 +3,13 @@ import { FindChildren, FindMember } from "../../family";
 import { Navbar } from "../../atoms/navbar";
 import { SingleMember } from "../../molecules/single-member";
 import styles from "./member.module.css";
+import { InfoModal } from "../../molecules/info-modal";
 
 export const Member = (props) => {
   const [member, setMember] = useState({});
   const [couple, setCouple] = useState(true);
+  const [showInfo, setShowInfo] = useState(false);
+  const [infoMem, setInfoMem] = useState(null);
 
   useEffect(() => {
     setMember(FindMember(props.match.params.memid));
@@ -16,9 +19,24 @@ export const Member = (props) => {
     setCouple(!couple);
   };
 
+  const onInfoOpen = (e) => {
+    e.preventDefault();
+    e.stopPropagation();
+    setShowInfo(true);
+    setInfoMem(e.target.id);
+  };
+
+  const onInfoClose = (e) => {
+    e.preventDefault();
+    e.stopPropagation();
+    setShowInfo(false);
+    setInfoMem(null);
+  };
+
   return (
     <div className="d-flex column start align-center relative">
       <Navbar member={member} memid={props.match.params.memid} />
+      <InfoModal memId={infoMem} show={showInfo} close={onInfoClose} />
       <h2
         className={`self-align-end col-8 col-md-4 text-right m-half ${styles.name}`}
       >
@@ -34,7 +52,12 @@ export const Member = (props) => {
       <div className="d-flex column center md-row wrap col-8 margin-center r-g-1 c-g-2 py-1">
         {FindChildren(props.match.params.memid).map((child) => {
           return (
-            <SingleMember key={child["id"]} id={child["id"]} single={couple} />
+            <SingleMember
+              key={child["id"]}
+              id={child["id"]}
+              single={couple}
+              infoOpen={onInfoOpen}
+            />
           );
         })}
       </div>

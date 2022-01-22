@@ -15,9 +15,16 @@ export const SingleMember = (props) => {
           styles["single-member"]
         } ${styles[member.status]}`}
       >
+        <span
+          className={`d-flex center align-center absolute ${styles.info}`}
+          onClick={props.infoOpen}
+          id={member.id}
+        >
+          i
+        </span>
         <img
           src={member.photo}
-          alt="single-member"
+          alt={member.name}
           className={styles[member.sex]}
         />
         <h4>{member.name}</h4>
@@ -53,4 +60,5 @@ export const SingleMember = (props) => {
 SingleMember.propTypes = {
   id: PropTypes.string.isRequired,
   single: PropTypes.bool,
+  infoOpen: PropTypes.func.isRequired,
 };
