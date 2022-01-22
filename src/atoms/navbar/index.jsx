@@ -17,6 +17,7 @@ export const Navbar = (props) => {
         className={`fixed col-12 vh-100 ${styles.background} ${
           show && styles.show
         }`}
+        onClick={onToggle}
       ></div>
       <div
         className={`d-flex column space-between col-8 col-md-4 col-lg-2 vh-100 fixed ${
@@ -44,7 +45,7 @@ export const Navbar = (props) => {
           {"marriedTo" in props.member && (
             <Link to={`/member/${props.member.marriedTo}`}>
               <div className={`${styles.item} d-flex column`}>
-                <p>Other half:</p>
+                <p>Better half:</p>
                 <p>{FindMember(props.member.marriedTo)["name"]}</p>
               </div>
             </Link>
