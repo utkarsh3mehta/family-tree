@@ -25,6 +25,12 @@ export const Member = (props) => {
         {"name" in member ? member["name"] : "loading..."}
       </h2>
       <h1 className="mt-half">Children</h1>
+      <button
+        onClick={onCoupleChange}
+        className={`p-1 pointer ${styles.toggleCouple} mb-2`}
+      >
+        {couple ? "Show" : "Hide"} their better halfs
+      </button>
       <div className="d-flex column center md-row wrap col-8 margin-center r-g-1 c-g-2 py-1">
         {FindChildren(props.match.params.memid).map((child) => {
           return (
@@ -32,7 +38,6 @@ export const Member = (props) => {
           );
         })}
       </div>
-      <button onClick={onCoupleChange} className={`p-1 ${styles.toggleCouple} mb-2`}>Toggle their better halfs</button>
     </div>
   );
 };
