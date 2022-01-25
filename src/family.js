@@ -42,7 +42,7 @@ export const FAMILY = [
     DOB: "17 Jan",
     DOD: "DD MMM, YYYY",
     marriedTo: bimlamehta,
-    photo: "https://ik.imagekit.io/bizwem110d/family-tree/somti_mehta_qFKO7z-kcU.jpeg?ik-sdk-version=javascript-1.4.3&updatedAt=1642826881479",
+    photo: "https://ik.imagekit.io/bizwem110d/family-tree/somti_mehta_rKImde8ni.jpeg?ik-sdk-version=javascript-1.4.3&updatedAt=1643126810657",
   },
   {
     id: bimlamehta,
@@ -51,7 +51,7 @@ export const FAMILY = [
     status: "active",
     DOB: "02 Feb",
     marriedTo: somtimehta,
-    photo: "https://assets-itkkids-001.fra1.cdn.digitaloceanspaces.com/prabjyot/utkarsh.png",
+    photo: "https://ik.imagekit.io/bizwem110d/family-tree/bimla_mehta_wfxEvClY00R.jpeg?ik-sdk-version=javascript-1.4.3&updatedAt=1643126810676",
   },
   {
     id: neerajmehta,
