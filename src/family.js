@@ -61,7 +61,7 @@ export const FAMILY = [
     status: "active",
     DOB: "10 Nov",
     marriedTo: sangeetamehta,
-    photo: "https://assets-itkkids-001.fra1.cdn.digitaloceanspaces.com/prabjyot/utkarsh.png",
+    photo: "https://ik.imagekit.io/bizwem110d/family-tree/man_1IChdUpwR.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1652636752957",
   },
   {
     id: sangeetamehta,
@@ -70,7 +70,7 @@ export const FAMILY = [
     status: 'active',
     DOB: "16 Nov",
     marriedTo: neerajmehta,
-    photo: "https://assets-itkkids-001.fra1.cdn.digitaloceanspaces.com/prabjyot/utkarsh.png",
+    photo: "https://ik.imagekit.io/bizwem110d/family-tree/woman_x-sSlgiMk.webp?ik-sdk-version=javascript-1.4.3&updatedAt=1652636752829",
   },
   {
     id: rumamehta,
@@ -89,7 +89,7 @@ export const FAMILY = [
     status: 'active',
     DOB: "23 Nov",
     marriedTo: rumamehta,
-    photo: "https://assets-itkkids-001.fra1.cdn.digitaloceanspaces.com/prabjyot/utkarsh.png",
+    photo: "https://ik.imagekit.io/bizwem110d/family-tree/man_1IChdUpwR.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1652636752957",
   },
   {
     id: pranavramachandran,
@@ -179,7 +179,7 @@ export const FAMILY = [
     status: "active",
     DOB: "5 Oct, 1996",
     nickname: "Kush",
-    photo: "https://assets-itkkids-001.fra1.cdn.digitaloceanspaces.com/prabjyot/utkarsh.png",
+    photo: "https://ik.imagekit.io/bizwem110d/family-tree/utkarsh_mehta.JPG?ik-sdk-version=javascript-1.4.3&updatedAt=1652636869099",
   },
   {
     id: bhoorimehta,
@@ -220,7 +220,7 @@ export const FAMILY = [
     DOB: "23 Sep",
     nickname: "Chinu",
     marriedTo: pradeepmehta,
-    photo: "https://assets-itkkids-001.fra1.cdn.digitaloceanspaces.com/prabjyot/utkarsh.png",
+    photo: "https://ik.imagekit.io/bizwem110d/family-tree/woman_x-sSlgiMk.webp?ik-sdk-version=javascript-1.4.3&updatedAt=1652636752829",
   },
   {
     id: irikamehta,
@@ -289,7 +289,7 @@ export const FAMILY = [
     sex: "M",
     status: "active",
     DOB: "1 Sep",
-    photo: "https://assets-itkkids-001.fra1.cdn.digitaloceanspaces.com/prabjyot/utkarsh.png",
+    photo: "https://ik.imagekit.io/bizwem110d/family-tree/pet_yE-peHN1j.png?ik-sdk-version=javascript-1.4.3&updatedAt=1652636927676",
   },
   {
     id: udishasharma,
@@ -347,7 +347,7 @@ export const FAMILY = [
     status: "active",
     DOB: "18 Jan",
     nickname: "Zorro",
-    photo: "https://assets-itkkids-001.fra1.cdn.digitaloceanspaces.com/prabjyot/utkarsh.png",
+    photo: "https://ik.imagekit.io/bizwem110d/family-tree/pet_yE-peHN1j.png?ik-sdk-version=javascript-1.4.3&updatedAt=1652636927676",
   },
 ];
 
